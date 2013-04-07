@@ -41,4 +41,4 @@ gem 'jquery-rails'
 gem 't'
 
 # to use evernote
-get 'evernote_oauth'
+gem 'evernote_oauth'
