@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  screen_name: MyText
+  full_text: MyText
+  contenthash: MyText
+  timestamp: 2013-04-05
+
+two:
+  screen_name: MyText
+  full_text: MyText
+  contenthash: MyText
+  timestamp: 2013-04-05

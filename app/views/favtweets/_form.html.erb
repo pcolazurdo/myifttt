@@ -1,0 +1,33 @@
+<%= form_for(@favtweet) do |f| %>
+  <% if @favtweet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@favtweet.errors.count, "error") %> prohibited this favtweet from being saved:</h2>
+
+      <ul>
+      <% @favtweet.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :screen_name %><br />
+    <%= f.text_area :screen_name %>
+  </div>
+  <div class="field">
+    <%= f.label :full_text %><br />
+    <%= f.text_area :full_text %>
+  </div>
+  <div class="field">
+    <%= f.label :contenthash %><br />
+    <%= f.text_area :contenthash %>
+  </div>
+  <div class="field">
+    <%= f.label :timestamp %><br />
+    <%= f.date_select :timestamp %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
