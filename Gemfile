@@ -37,4 +37,8 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 
+# To use twitter
 gem 't'
+
+# to use evernote
+get 'evernote_oauth'
