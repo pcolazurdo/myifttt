@@ -53,7 +53,12 @@ GEM
       http_parser.rb (~> 0.5)
       simple_oauth (~> 0.1)
     erubis (2.7.0)
+    eventmachine (1.0.3)
     eventmachine (1.0.3-x86-mingw32)
+    evernote-thrift (1.23.2)
+    evernote_oauth (0.2.1)
+      evernote-thrift
+      oauth (>= 0.4.1)
     execjs (1.4.0)
       multi_json (~> 1.0)
     faraday (0.8.7)
@@ -63,6 +68,7 @@ GEM
       multi_json
     hike (1.2.1)
     htmlentities (4.3.1)
+    http_parser.rb (0.5.3)
     http_parser.rb (0.5.3-x86-mingw32)
     i18n (0.6.1)
     journey (1.0.4)
@@ -151,6 +157,7 @@ GEM
     uglifier (1.3.0)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
+    yajl-ruby (1.1.0)
     yajl-ruby (1.1.0-x86-mingw32)
 
 PLATFORMS
@@ -158,6 +165,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
+  evernote_oauth
   jquery-rails
   rails (= 3.2.13)
   sass-rails (~> 3.2.3)
