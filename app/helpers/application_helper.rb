@@ -13,7 +13,7 @@ module ApplicationHelper
     include T::Requestable
     include T::Utils
 
-    DEFAULT_NUM_RESULTS = 20
+    DEFAULT_NUM_RESULTS = 200
     # DIRECT_MESSAGE_HEADINGS = ["ID", "Posted at", "Screen name", "Text"]
     # TREND_HEADINGS = ["WOEID", "Parent ID", "Type", "Name", "Country"]
     
