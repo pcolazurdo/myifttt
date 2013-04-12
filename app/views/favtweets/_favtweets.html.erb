@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Screen name:</b>
+  <%= @favtweet.screen_name %>
+</p>
+
+<p>
+  <b>Full text:</b>
+  <%= @favtweet.full_text %>
+</p>
+
+<p>
+  <b>Contenthash:</b>
+  <%= @favtweet.contenthash %>
+</p>
+
+<p>
+  <b>Timestamp:</b>
+  <%= @favtweet.timestamp %>
+</p>
+
+
+<%= link_to 'Edit', edit_favtweet_path(@favtweet) %> |
+<%= link_to 'Back', favtweets_path %>
