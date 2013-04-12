@@ -1,25 +1,30 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <b>Screen name:</b>
-  <%= @favtweet.screen_name %>
-</p>
+<h1>Listing favtweets</h1>
 
-<p>
-  <b>Full text:</b>
-  <%= @favtweet.full_text %>
-</p>
+<table>
+  <tr>
+    <th>Screen name</th>
+    <th>Full text</th>
+    <th>Contenthash</th>
+    <th>Timestamp</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
 
-<p>
-  <b>Contenthash:</b>
-  <%= @favtweet.contenthash %>
-</p>
+<% @favtweets.each do |favtweet| %>
+  <tr>
+    <td><%= favtweet.screen_name %></td>
+    <td><%= favtweet.full_text %></td>
+    <td><%= favtweet.contenthash %></td>
+    <td><%= favtweet.timestamp %></td>
+    <td><%= link_to 'Show', favtweet %></td>
+    <td><%= link_to 'Edit', edit_favtweet_path(favtweet) %></td>
+    <td><%= link_to 'Destroy', favtweet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
 
-<p>
-  <b>Timestamp:</b>
-  <%= @favtweet.timestamp %>
-</p>
+<br />
 
-
-<%= link_to 'Edit', edit_favtweet_path(@favtweet) %> |
-<%= link_to 'Back', favtweets_path %>
+<%= link_to 'New Favtweet', new_favtweet_path %>
