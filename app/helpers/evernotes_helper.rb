@@ -12,9 +12,9 @@ module EvernotesHelper
       allfavtweets.each do |tw|
         if tw.timestamp == nil then          
           EvernoteNote.new(tw) 
-          #tw.timestamp = Time.now.utc
+          # tw.timestamp = Time.now.utc
           tw.save
-          count ++
+          count = count + 1
         end
       end
       @newNotes = count        
