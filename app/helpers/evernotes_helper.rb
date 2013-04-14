@@ -25,4 +25,5 @@ module EvernotesHelper
     def initialize (tw)
       
     end
+  end
 end
