@@ -50,28 +50,31 @@ note.title = "Test note from EDAMTest.rb"
 # for the attachment. At a minimum, the Resource contains the binary attachment
 # data, an MD5 hash of the binary data, and the attachment MIME type. It can also
 #/ include attributes such as filename and location.
-filename = "enlogo.png"
-image = File.open(filename, "rb") { |io| io.read }
-hashFunc = Digest::MD5.new
 
-data = Evernote::EDAM::Type::Data.new
-data.size = image.size
-data.bodyHash = hashFunc.digest(image)
-data.body = image
 
-resource = Evernote::EDAM::Type::Resource.new
-resource.mime = "image/png"
-resource.data = data
-resource.attributes = Evernote::EDAM::Type::ResourceAttributes.new
-resource.attributes.fileName = filename
+#filename = "enlogo.png"
+#image = File.open(filename, "rb") { |io| io.read }
+#hashFunc = Digest::MD5.new
+
+#data = Evernote::EDAM::Type::Data.new
+#data.size = image.size
+#data.bodyHash = hashFunc.digest(image)
+#data.body = image
+
+#resource = Evernote::EDAM::Type::Resource.new
+#resource.mime = "image/png"
+#resource.data = data
+#resource.attributes = Evernote::EDAM::Type::ResourceAttributes.new
+#resource.attributes.fileName = filename
 
 # Now, add the new Resource to the note's list of resources
-note.resources = [ resource ]
+#note.resources = [ resource ]
 
 # To display the Resource as part of the note's content, include an <en-media>
 # tag in the note's ENML content. The en-media tag identifies the corresponding
 # Resource using the MD5 hash.
-hashHex = hashFunc.hexdigest(image)
+#hashHex = hashFunc.hexdigest(image)
+*/
 
 # The content of an Evernote note is represented using Evernote Markup Language
 # (ENML). The full ENML specification can be found in the Evernote API Overview
@@ -80,7 +83,6 @@ note.content = <<EOF
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
 <en-note>Here is the Evernote logo:<br/>
-  <en-media type="image/png" hash="#{hashHex}"/>
 </en-note>
 EOF
 
