@@ -1,6 +1,7 @@
 require 'digest/md5'
 require 'evernote-thrift'
 require 'time'
+require 'ercfile'
 
 module EvernotesHelper
   class Evernotes
@@ -27,7 +28,7 @@ module EvernotesHelper
   class EvernoteNote
     
     def initialize ()
-      @authToken = "S=s1:U=64c2b:E=145901a4c88:C=13e3869208a:P=1cd:A=en-devtoken:V=2:H=91bc5d8ed26069ea4d1203e34323a3fe"
+      @authToken = E::ERCFile.active_consumer_key
       evernoteHost = "sandbox.evernote.com"
       userStoreUrl = "https://#{evernoteHost}/edam/user"
 

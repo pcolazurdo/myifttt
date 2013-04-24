@@ -17,7 +17,7 @@ module E
     end
 
     OAUTH_CONSUMER_KEY = ERCFile.active_consumer_key
-    OAUTH_CONSUMER_SECRET = ERCFile.active_consumer_secret
+    #OAUTH_CONSUMER_KEY = ERCFile.active_consumer_key
 
     SANDBOX = true
   end
