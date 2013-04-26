@@ -101,14 +101,16 @@ module EvernotesHelper
       # attributes such as the note's title.
       note = Evernote::EDAM::Type::Note.new
       
-      puts "Saving Note from #{twit.screen_name}"
-      puts "note: #{twit.full_text}"
-      
-      note.title = "Tweet from #{twit.screen_name}"
+      fulltext = CGI::escapeHTML(twit.full_text)
+      screenname= CGI::escapeHTML(twit.screen_name)
+      puts "Saving Note from #{screenname}"
+      puts "note: #{fulltext}"
+            
+      note.title = "Tweet from #{screenname}"
       note.content = <<EOF
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">
-<en-note>#{twit.full_text}<br/>
+<en-note>#{fulltext}<br/>
 </en-note>
 EOF
 
