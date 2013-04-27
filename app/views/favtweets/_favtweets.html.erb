@@ -5,8 +5,6 @@
   <tr>
     <th>Screen name</th>
     <th>Full text</th>
-    <th>Contenthash</th>
-    <th>Timestamp</th>
     <th></th>
     <th></th>
     <th></th>
@@ -16,11 +14,6 @@
   <tr>
     <td><%= favtweet.screen_name %></td>
     <td><%= favtweet.full_text %></td>
-    <td><%= favtweet.contenthash %></td>
-    <td><%= favtweet.timestamp %></td>
-    <td><%= link_to 'Show', favtweet %></td>
-    <td><%= link_to 'Edit', edit_favtweet_path(favtweet) %></td>
-    <td><%= link_to 'Destroy', favtweet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>

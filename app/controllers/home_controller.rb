@@ -1,7 +1,7 @@
 
 class HomeController < ApplicationController
   def index
-    tf = ApplicationHelper::TweeterFunctions.new()
+    tf = FavtweetsHelper::TweeterFunctions.new()
     tf.favorites()
     
     @favtweets = Favtweet.all
