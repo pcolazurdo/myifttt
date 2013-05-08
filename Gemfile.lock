@@ -161,6 +161,7 @@ GEM
     yajl-ruby (1.1.0-x86-mingw32)
 
 PLATFORMS
+  ruby
   x86-mingw32
 
 DEPENDENCIES

@@ -1,0 +1,14 @@
+Wed, 08 May 2013 12:20:17 -0300
+doc/README_FOR_APP	Wed, 08 May 2013 11:43:59 -0300
+app/controllers/application_controller.rb	Wed, 08 May 2013 11:43:59 -0300
+app/controllers/evernotes_controller.rb	Wed, 08 May 2013 11:43:59 -0300
+app/controllers/favtweets_controller.rb	Wed, 08 May 2013 11:43:59 -0300
+app/controllers/home_controller.rb	Wed, 08 May 2013 11:43:59 -0300
+app/helpers/application_helper.rb	Wed, 08 May 2013 11:43:59 -0300
+app/helpers/evernote-test.rb	Wed, 08 May 2013 11:43:59 -0300
+app/helpers/evernotes_helper.rb	Wed, 08 May 2013 11:43:59 -0300
+app/helpers/favtweets_helper.rb	Wed, 08 May 2013 11:43:59 -0300
+app/helpers/home_helper.rb	Wed, 08 May 2013 11:43:59 -0300
+app/models/favtweet.rb	Wed, 08 May 2013 11:43:59 -0300
+app/utils/ercfile.rb	Wed, 08 May 2013 11:43:59 -0300
+app/utils/evernote_config.rb	Wed, 08 May 2013 11:43:59 -0300

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>class EvernotesHelper::EvernoteNote - Rails Application Documentation</title>
+
+<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../index.html">Home</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/helpers/evernotes_helper.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">Object
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-c-new">::new</a>
+    
+    <li><a href="#method-i-save">#save</a>
+    
+    <li><a href="#method-i-translate_error">#translate_error</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../E.html">E</a>
+  
+    <li><a href="../E/ERCFile.html">E::ERCFile</a>
+  
+    <li><a href="../E/Evernote.html">E::Evernote</a>
+  
+    <li><a href="../EvernotesHelper.html">EvernotesHelper</a>
+  
+    <li><a href="../EvernotesHelper/EvernoteNote.html">EvernotesHelper::EvernoteNote</a>
+  
+    <li><a href="../EvernotesHelper/Evernotes.html">EvernotesHelper::Evernotes</a>
+  
+    <li><a href="../FavtweetsHelper.html">FavtweetsHelper</a>
+  
+    <li><a href="../FavtweetsHelper/TweeterFunctions.html">FavtweetsHelper::TweeterFunctions</a>
+  
+    <li><a href="../ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="../ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="../EvernotesController.html">EvernotesController</a>
+  
+    <li><a href="../Favtweet.html">Favtweet</a>
+  
+    <li><a href="../FavtweetsController.html">FavtweetsController</a>
+  
+    <li><a href="../HomeController.html">HomeController</a>
+  
+    <li><a href="../HomeHelper.html">HomeHelper</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class EvernotesHelper::EvernoteNote</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File app/helpers/evernotes_helper.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span> ()
+  <span class="ruby-identifier">ercfile</span> = <span class="ruby-constant">E</span><span class="ruby-operator">::</span><span class="ruby-constant">ERCFile</span>.<span class="ruby-identifier">instance</span>
+  <span class="ruby-ivar">@authToken</span> = <span class="ruby-identifier">ercfile</span>.<span class="ruby-identifier">active_consumer_key</span>
+  <span class="ruby-identifier">evernoteHost</span> = <span class="ruby-string">&quot;sandbox.evernote.com&quot;</span>
+  <span class="ruby-identifier">userStoreUrl</span> = <span class="ruby-node">&quot;https://#{evernoteHost}/edam/user&quot;</span>
+
+  <span class="ruby-ivar">@userStoreTransport</span> = <span class="ruby-constant">Thrift</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTPClientTransport</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">userStoreUrl</span>)
+  <span class="ruby-ivar">@userStoreProtocol</span> = <span class="ruby-constant">Thrift</span><span class="ruby-operator">::</span><span class="ruby-constant">BinaryProtocol</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@userStoreTransport</span>)
+  <span class="ruby-ivar">@userStore</span> = <span class="ruby-constant">Evernote</span><span class="ruby-operator">::</span><span class="ruby-constant">EDAM</span><span class="ruby-operator">::</span><span class="ruby-constant">UserStore</span><span class="ruby-operator">::</span><span class="ruby-constant">UserStore</span><span class="ruby-operator">::</span><span class="ruby-constant">Client</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@userStoreProtocol</span>)
+
+  <span class="ruby-identifier">versionOK</span> = <span class="ruby-ivar">@userStore</span>.<span class="ruby-identifier">checkVersion</span>(<span class="ruby-string">&quot;Evernote EDAMTest (Ruby)&quot;</span>,
+  <span class="ruby-constant">Evernote</span><span class="ruby-operator">::</span><span class="ruby-constant">EDAM</span><span class="ruby-operator">::</span><span class="ruby-constant">UserStore</span><span class="ruby-operator">::</span><span class="ruby-constant">EDAM_VERSION_MAJOR</span>,
+  <span class="ruby-constant">Evernote</span><span class="ruby-operator">::</span><span class="ruby-constant">EDAM</span><span class="ruby-operator">::</span><span class="ruby-constant">UserStore</span><span class="ruby-operator">::</span><span class="ruby-constant">EDAM_VERSION_MINOR</span>)
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Is my Evernote API version up to date?  #{versionOK}&quot;</span>
+  <span class="ruby-identifier">puts</span>
+  <span class="ruby-identifier">exit</span>(<span class="ruby-value">1</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">versionOK</span>
+  <span class="ruby-identifier">noteStoreUrl</span> = <span class="ruby-ivar">@userStore</span>.<span class="ruby-identifier">getNoteStoreUrl</span>(<span class="ruby-ivar">@authToken</span>)
+
+  <span class="ruby-identifier">noteStoreTransport</span> = <span class="ruby-constant">Thrift</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTPClientTransport</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">noteStoreUrl</span>)
+  <span class="ruby-identifier">noteStoreProtocol</span> = <span class="ruby-constant">Thrift</span><span class="ruby-operator">::</span><span class="ruby-constant">BinaryProtocol</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">noteStoreTransport</span>)
+  <span class="ruby-ivar">@noteStore</span> = <span class="ruby-constant">Evernote</span><span class="ruby-operator">::</span><span class="ruby-constant">EDAM</span><span class="ruby-operator">::</span><span class="ruby-constant">NoteStore</span><span class="ruby-operator">::</span><span class="ruby-constant">NoteStore</span><span class="ruby-operator">::</span><span class="ruby-constant">Client</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">noteStoreProtocol</span>)
+
+  <span class="ruby-comment"># List all of the notebooks in the user's account</span>
+  <span class="ruby-identifier">notebooks</span> = <span class="ruby-ivar">@noteStore</span>.<span class="ruby-identifier">listNotebooks</span>(<span class="ruby-ivar">@authToken</span>)
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Found #{notebooks.size} notebooks:&quot;</span>
+  <span class="ruby-identifier">defaultNotebook</span> = <span class="ruby-identifier">notebooks</span>.<span class="ruby-identifier">first</span>
+  <span class="ruby-identifier">notebooks</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">notebook</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;  * #{notebook.name}&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">puts</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Notes will be created in the default notebook: #{defaultNotebook.name}&quot;</span>
+  <span class="ruby-identifier">puts</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-save" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">save</span><span
+            class="method-args">(twit)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="save-source">
+            <pre><span class="ruby-comment"># File app/helpers/evernotes_helper.rb, line 99</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier">save</span>(<span class="ruby-identifier">twit</span>)
+      <span class="ruby-comment"># To create a new note, simply create a new Note object and fill in</span>
+      <span class="ruby-comment"># attributes such as the note's title.</span>
+      <span class="ruby-identifier">note</span> = <span class="ruby-constant">Evernote</span><span class="ruby-operator">::</span><span class="ruby-constant">EDAM</span><span class="ruby-operator">::</span><span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Note</span>.<span class="ruby-identifier">new</span>
+      
+      <span class="ruby-identifier">fulltext</span> = <span class="ruby-constant">CGI</span><span class="ruby-operator">::</span><span class="ruby-identifier">escapeHTML</span>(<span class="ruby-identifier">twit</span>.<span class="ruby-identifier">full_text</span>)
+      <span class="ruby-identifier">screenname</span>= <span class="ruby-constant">CGI</span><span class="ruby-operator">::</span><span class="ruby-identifier">escapeHTML</span>(<span class="ruby-identifier">twit</span>.<span class="ruby-identifier">screen_name</span>)
+      <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Saving Note from #{screenname}&quot;</span>
+      <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;note: #{fulltext}&quot;</span>
+            
+      <span class="ruby-identifier">note</span>.<span class="ruby-identifier">title</span> = <span class="ruby-node">&quot;Tweet from #{screenname}&quot;</span>
+      <span class="ruby-identifier">note</span>.<span class="ruby-identifier">content</span> = <span class="ruby-value">&lt;&lt;EOF
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE en-note SYSTEM &quot;http://xml.evernote.com/pub/enml2.dtd&quot;&gt;
+&lt;en-note&gt;#{fulltext}&lt;br/&gt;
+&lt;/en-note&gt;
+EOF</span>
+
+<span class="ruby-comment"># Finally, send the new note to Evernote using the createNote method</span>
+<span class="ruby-comment"># The new Note object that is returned will contain server-generated</span>
+<span class="ruby-comment"># attributes such as the new note's unique GUID.</span>
+      <span class="ruby-keyword">begin</span>
+        <span class="ruby-identifier">createdNote</span> = <span class="ruby-ivar">@noteStore</span>.<span class="ruby-identifier">createNote</span>(<span class="ruby-ivar">@authToken</span>, <span class="ruby-identifier">note</span>)
+      <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Evernote</span><span class="ruby-operator">::</span><span class="ruby-constant">EDAM</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span><span class="ruby-operator">::</span><span class="ruby-constant">EDAMUserException</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+       <span class="ruby-comment">#the exceptions that come back from Evernote are hard to read, but really important to keep track of</span>
+        <span class="ruby-identifier">msg</span> = <span class="ruby-node">&quot;Caught an exception from Evernote trying to create a note.  #{translate_error(e)}&quot;</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-identifier">msg</span>
+      <span class="ruby-keyword">end</span>
+      
+
+      <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Successfully created a new note with GUID: #{createdNote.guid}&quot;</span>
+    <span class="ruby-keyword">end</span></pre>
+          </div><!-- save-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- save-method -->
+
+    
+      <div id="method-i-translate_error" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">translate_error</span><span
+            class="method-args">(e)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="translate_error-source">
+            <pre><span class="ruby-comment"># File app/helpers/evernotes_helper.rb, line 64</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">translate_error</span>(<span class="ruby-identifier">e</span>)
+  <span class="ruby-identifier">error_name</span> = <span class="ruby-string">&quot;unknown&quot;</span>
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">errorCode</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">Evernote</span><span class="ruby-operator">::</span><span class="ruby-constant">EDAM</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span><span class="ruby-operator">::</span><span class="ruby-constant">EDAMErrorCode</span><span class="ruby-operator">::</span><span class="ruby-constant">AUTH_EXPIRED</span>
+    <span class="ruby-identifier">error_name</span> = <span class="ruby-string">&quot;AUTH_EXPIRED&quot;</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">Evernote</span><span class="ruby-operator">::</span><span class="ruby-constant">EDAM</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span><span class="ruby-operator">::</span><span class="ruby-constant">EDAMErrorCode</span><span class="ruby-operator">::</span><span class="ruby-constant">BAD_DATA_FORMAT</span>
+    <span class="ruby-identifier">error_name</span> = <span class="ruby-string">&quot;BAD_DATA_FORMAT&quot;</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">Evernote</span><span class="ruby-operator">::</span><span class="ruby-constant">EDAM</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span><span class="ruby-operator">::</span><span class="ruby-constant">EDAMErrorCode</span><span class="ruby-operator">::</span><span class="ruby-constant">DATA_CONFLICT</span>
+    <span class="ruby-identifier">error_name</span> = <span class="ruby-string">&quot;DATA_CONFLICT&quot;</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">Evernote</span><span class="ruby-operator">::</span><span class="ruby-constant">EDAM</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span><span class="ruby-operator">::</span><span class="ruby-constant">EDAMErrorCode</span><span class="ruby-operator">::</span><span class="ruby-constant">DATA_REQUIRED</span>
+    <span class="ruby-identifier">error_name</span> = <span class="ruby-string">&quot;DATA_REQUIRED&quot;</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">Evernote</span><span class="ruby-operator">::</span><span class="ruby-constant">EDAM</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span><span class="ruby-operator">::</span><span class="ruby-constant">EDAMErrorCode</span><span class="ruby-operator">::</span><span class="ruby-constant">ENML_VALIDATION</span>
+    <span class="ruby-identifier">error_name</span> = <span class="ruby-string">&quot;ENML_VALIDATION&quot;</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">Evernote</span><span class="ruby-operator">::</span><span class="ruby-constant">EDAM</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span><span class="ruby-operator">::</span><span class="ruby-constant">EDAMErrorCode</span><span class="ruby-operator">::</span><span class="ruby-constant">INTERNAL_ERROR</span>
+    <span class="ruby-identifier">error_name</span> = <span class="ruby-string">&quot;INTERNAL_ERROR&quot;</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">Evernote</span><span class="ruby-operator">::</span><span class="ruby-constant">EDAM</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span><span class="ruby-operator">::</span><span class="ruby-constant">EDAMErrorCode</span><span class="ruby-operator">::</span><span class="ruby-constant">INVALID_AUTH</span>
+    <span class="ruby-identifier">error_name</span> = <span class="ruby-string">&quot;INVALID_AUTH&quot;</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">Evernote</span><span class="ruby-operator">::</span><span class="ruby-constant">EDAM</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span><span class="ruby-operator">::</span><span class="ruby-constant">EDAMErrorCode</span><span class="ruby-operator">::</span><span class="ruby-constant">LIMIT_REACHED</span>
+    <span class="ruby-identifier">error_name</span> = <span class="ruby-string">&quot;LIMIT_REACHED&quot;</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">Evernote</span><span class="ruby-operator">::</span><span class="ruby-constant">EDAM</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span><span class="ruby-operator">::</span><span class="ruby-constant">EDAMErrorCode</span><span class="ruby-operator">::</span><span class="ruby-constant">PERMISSION_DENIED</span>
+    <span class="ruby-identifier">error_name</span> = <span class="ruby-string">&quot;PERMISSION_DENIED&quot;</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">Evernote</span><span class="ruby-operator">::</span><span class="ruby-constant">EDAM</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span><span class="ruby-operator">::</span><span class="ruby-constant">EDAMErrorCode</span><span class="ruby-operator">::</span><span class="ruby-constant">QUOTA_REACHED</span>
+    <span class="ruby-identifier">error_name</span> = <span class="ruby-string">&quot;QUOTA_REACHED&quot;</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">Evernote</span><span class="ruby-operator">::</span><span class="ruby-constant">EDAM</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span><span class="ruby-operator">::</span><span class="ruby-constant">EDAMErrorCode</span><span class="ruby-operator">::</span><span class="ruby-constant">SHARD_UNAVAILABLE</span>
+    <span class="ruby-identifier">error_name</span> = <span class="ruby-string">&quot;SHARD_UNAVAILABLE&quot;</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">Evernote</span><span class="ruby-operator">::</span><span class="ruby-constant">EDAM</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span><span class="ruby-operator">::</span><span class="ruby-constant">EDAMErrorCode</span><span class="ruby-operator">::</span><span class="ruby-constant">UNKNOWN</span>
+    <span class="ruby-identifier">error_name</span> = <span class="ruby-string">&quot;UNKNOWN&quot;</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">Evernote</span><span class="ruby-operator">::</span><span class="ruby-constant">EDAM</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span><span class="ruby-operator">::</span><span class="ruby-constant">EDAMErrorCode</span><span class="ruby-operator">::</span><span class="ruby-constant">VALID_VALUES</span>
+    <span class="ruby-identifier">error_name</span> = <span class="ruby-string">&quot;VALID_VALUES&quot;</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">Evernote</span><span class="ruby-operator">::</span><span class="ruby-constant">EDAM</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span><span class="ruby-operator">::</span><span class="ruby-constant">EDAMErrorCode</span><span class="ruby-operator">::</span><span class="ruby-constant">VALUE_MAP</span>
+    <span class="ruby-identifier">error_name</span> = <span class="ruby-string">&quot;VALUE_MAP&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">rv</span> = <span class="ruby-node">&quot;Error code was: #{error_name}[#{e.errorCode}] and parameter: [#{e.parameter}]&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- translate_error-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- translate_error-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
