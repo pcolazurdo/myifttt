@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130406001442) do
+ActiveRecord::Schema.define(:version => 20130510010906) do
 
   create_table "favtweets", :force => true do |t|
     t.text     "screen_name"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 20130406001442) do
     t.date     "timestamp"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.string   "tweetorigin"
   end
 
 end
