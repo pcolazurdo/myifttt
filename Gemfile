@@ -42,3 +42,6 @@ gem 't'
 
 # to use evernote
 gem 'evernote_oauth'
+
+# adding bootstrap
+gem 'bootstrap-sass'
