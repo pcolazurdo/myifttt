@@ -1,22 +1,24 @@
 
 <h1>Listing favtweets</h1>
 
-<table>
-  <tr>
-    <th>Screen name</th>
-    <th>Full text</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<div class="panel">
+	<table class="table table-striped">
+  	<tr>
+    	<th>Screen name</th>
+    	<th>Full text</th>
+    	<th></th>
+    	<th></th>
+    	<th></th>
+  	</tr>
 
-<% @favtweets.each do |favtweet| %>
-  <tr>
-    <td><%= favtweet.screen_name %></td>
-    <td><%= favtweet.full_text %></td>
-  </tr>
-<% end %>
-</table>
+	<% @favtweets.each do |favtweet| %>
+  	<tr>
+    	<td><%= favtweet.screen_name %></td>
+    	<td><%= favtweet.full_text %></td>
+  	</tr>
+	<% end %>
+	</table>
+</div>
 
 <br />
 
